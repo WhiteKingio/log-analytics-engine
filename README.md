@@ -34,12 +34,12 @@ Each line represents **one log event** (JSON Lines format).
 - `userAgent` — client user agent
 
 ### Classification
-- `tags` — event labels (`http`, `error`, `incident`, …)
+- `tags` — event labels (`http`, `errorInfo`, `incident`, …)
 
-### Error (optional)
-- `error.type` — exception class
-- `error.code` — domain error code
-- `error.stack` — structured stack trace frames
+### DTO.ErrorInfo (optional)
+- `errorInfo.type` — exception class
+- `errorInfo.code` — domain errorInfo code
+- `errorInfo.stack` — structured stack trace frames
 
 
 Example: 
@@ -60,9 +60,9 @@ Example:
   "userId":"u1558",
   "country":"ES",
   "userAgent":"Mozilla/5.0",
-  "tags":["http","error","incident","orders"],
+  "tags":["http","errorInfo","incident","orders"],
   "message":"downstream.timeout",
-  "error":{
+  "errorInfo":{
     "type":"TimeoutException",
     "code":"ORD-TOUT",
     "stack":[
