@@ -1,7 +1,7 @@
-package main;
+package lab01;
 
-import DTO.LogEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lab01.dto.LogEvent;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,6 +23,5 @@ public class JsonlLogParser {
     public static Stream<LogEvent> engine(Path path) throws IOException {
         return Files.lines(path).filter(line -> !line.isEmpty())
                 .map(JsonlLogParser::parse);
-                //.map(line -> JsonlLogParser.parse(line)
     }
 }

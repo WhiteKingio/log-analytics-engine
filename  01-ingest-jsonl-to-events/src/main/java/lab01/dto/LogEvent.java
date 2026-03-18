@@ -1,4 +1,4 @@
-package DTO;
+package lab01.dto;
 
 import java.util.List;
 

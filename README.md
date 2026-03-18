@@ -36,7 +36,7 @@ Each line represents **one log event** (JSON Lines format).
 ### Classification
 - `tags` — event labels (`http`, `errorInfo`, `incident`, …)
 
-### DTO.ErrorInfo (optional)
+### java.io.whiteking.dto.ErrorInfo (optional)
 - `errorInfo.type` — exception class
 - `errorInfo.code` — domain errorInfo code
 - `errorInfo.stack` — structured stack trace frames
